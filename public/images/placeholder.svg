@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#111111"></rect>
+  <path d="M0 800L430 420L710 670L970 350L1600 900V1000H0Z" fill="#272727"></path>
+  <circle cx="1240" cy="230" r="95" fill="#383838"></circle>
+  <text x="800" y="520" fill="#8a8a8a" font-family="Arial, sans-serif" font-size="48" text-anchor="middle">
+    Santos Barbearia
+  </text>
+</svg>
