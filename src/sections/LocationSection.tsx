@@ -1,6 +1,5 @@
 import { Container } from '../components/layout/Container';
 import { CtaLink } from '../components/ui/CtaLink';
-import { ImageWithFallback } from '../components/ui/ImageWithFallback';
 import { siteConfig } from '../config/site';
 import { buildTelephoneUrl, buildWhatsAppUrl } from '../utils/contact';
 
@@ -11,6 +10,9 @@ export function LocationSection() {
     siteConfig.phoneInternational,
     siteConfig.whatsappMessage,
   );
+
+  const mapQuery = `Santos Barbearia ${siteConfig.address.city} ${siteConfig.address.country}`;
+  const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=17&output=embed`;
 
   return (
     <section
@@ -75,28 +77,18 @@ export function LocationSection() {
             </div>
           </div>
 
-          <a
-            href={siteConfig.googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir localização da Santos Barbearia no Google Maps"
-            className="group relative min-h-96 overflow-hidden border border-white/10"
-          >
-            <ImageWithFallback
-              src="/images/location-map.webp"
-              alt="Mapa da localização da Santos Barbearia em Ponte de Lima."
+          <div className="group relative min-h-96 overflow-hidden border border-white/10">
+            <iframe
+              title="Mapa da Santos Barbearia"
+              src={mapEmbedUrl}
               loading="lazy"
-              width={1400}
-              height={800}
-              className="size-full object-cover grayscale transition duration-500 group-hover:scale-[1.02] motion-reduce:transition-none"
+              className="h-full w-full border-none grayscale contrast-[0.92] opacity-95"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
             />
 
-            <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/5" />
-
-            <span className="text-ink absolute top-1/2 left-1/2 -translate-1/2 bg-white px-5 py-3 text-xs font-semibold tracking-wide uppercase shadow-xl">
-              Santos Barbearia
-            </span>
-          </a>
+            <div className="pointer-events-none absolute inset-0 bg-black/15" />
+          </div>
         </div>
       </Container>
     </section>
