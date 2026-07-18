@@ -1,9 +1,6 @@
 import { siteConfig } from '../../config/site';
 import { navigationItems } from '../../data/navigation';
-import {
-  buildTelephoneUrl,
-  buildWhatsAppUrl,
-} from '../../utils/contact';
+import { buildTelephoneUrl, buildWhatsAppUrl } from '../../utils/contact';
 import { Logo } from '../ui/Logo';
 import { Container } from './Container';
 
@@ -15,18 +12,16 @@ export function Footer() {
     siteConfig.whatsappMessage,
   );
 
-  const telephoneUrl = buildTelephoneUrl(
-    siteConfig.phoneInternational,
-  );
+  const telephoneUrl = buildTelephoneUrl(siteConfig.phoneInternational);
 
   return (
-    <footer className="border-t border-line bg-paper py-14">
+    <footer className="border-line bg-paper border-t py-14">
       <Container>
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Logo />
 
-            <p className="mt-5 max-w-xs text-sm leading-6 text-smoke">
+            <p className="text-smoke mt-5 max-w-xs text-sm leading-6">
               Tradição, técnica e cuidado num espaço pensado para si.
             </p>
           </div>
@@ -36,13 +31,10 @@ export function Footer() {
               Navegação
             </h2>
 
-            <ul className="mt-5 space-y-3 text-sm text-smoke">
+            <ul className="text-smoke mt-5 space-y-3 text-sm">
               {navigationItems.map((item) => (
                 <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className="transition-colors hover:text-ink"
-                  >
+                  <a href={item.href} className="hover:text-ink transition-colors">
                     {item.label}
                   </a>
                 </li>
@@ -55,12 +47,9 @@ export function Footer() {
               Contactos
             </h2>
 
-            <ul className="mt-5 space-y-3 text-sm text-smoke">
+            <ul className="text-smoke mt-5 space-y-3 text-sm">
               <li>
-                <a
-                  href={telephoneUrl}
-                  className="transition-colors hover:text-ink"
-                >
+                <a href={telephoneUrl} className="hover:text-ink transition-colors">
                   {siteConfig.phoneDisplay}
                 </a>
               </li>
@@ -68,7 +57,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="transition-colors hover:text-ink"
+                  className="hover:text-ink transition-colors"
                 >
                   {siteConfig.email}
                 </a>
@@ -79,7 +68,7 @@ export function Footer() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-ink"
+                  className="hover:text-ink transition-colors"
                 >
                   WhatsApp
                 </a>
@@ -92,14 +81,14 @@ export function Footer() {
               Redes sociais
             </h2>
 
-            <ul className="mt-5 flex flex-wrap gap-4 text-sm text-smoke">
+            <ul className="text-smoke mt-5 flex flex-wrap gap-4 text-sm">
               {siteConfig.socialLinks.map((socialLink) => (
                 <li key={socialLink.label}>
                   <a
                     href={socialLink.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors hover:text-ink"
+                    className="hover:text-ink transition-colors"
                   >
                     {socialLink.label}
                   </a>
@@ -109,12 +98,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col justify-between gap-4 border-t border-line pt-6 text-xs text-smoke sm:flex-row">
+        <div className="border-line text-smoke mt-12 flex flex-col justify-between gap-4 border-t pt-6 text-xs sm:flex-row">
           <p>
-            © {currentYear} {siteConfig.name}. Todos os direitos
-            reservados.
+            © {currentYear} {siteConfig.name}. Todos os direitos reservados.
           </p>
-
         </div>
       </Container>
     </footer>

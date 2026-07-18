@@ -11,7 +11,7 @@ function App() {
     <>
       <a
         href="#conteudo-principal"
-        className="fixed top-3 left-3 z-[100] -translate-y-24 bg-white px-4 py-3 text-sm font-semibold text-ink shadow-lg transition-transform focus:translate-y-0"
+        className="text-ink fixed top-3 left-3 z-[100] -translate-y-24 bg-white px-4 py-3 text-sm font-semibold shadow-lg transition-transform focus:translate-y-0"
       >
         Saltar para o conteúdo principal
       </a>

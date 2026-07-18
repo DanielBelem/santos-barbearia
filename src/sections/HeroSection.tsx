@@ -14,7 +14,7 @@ export function HeroSection() {
     <section
       id="inicio"
       aria-labelledby="hero-title"
-      className="relative isolate min-h-[42rem] overflow-hidden bg-ink text-white"
+      className="bg-ink relative isolate min-h-[42rem] overflow-hidden text-white"
     >
       <ImageWithFallback
         src="/images/hero.webp"
@@ -37,27 +37,20 @@ export function HeroSection() {
             className="font-display text-6xl leading-[0.92] sm:text-7xl lg:text-8xl"
           >
             Santos
-            <span className="mt-3 block font-body text-xl font-normal tracking-[0.3em] uppercase sm:text-2xl">
+            <span className="font-body mt-3 block text-xl font-normal tracking-[0.3em] uppercase sm:text-2xl">
               Barbearia
             </span>
           </h1>
 
-          <div
-            aria-hidden="true"
-            className="my-8 h-px w-12 bg-white/60"
-          />
+          <div aria-hidden="true" className="my-8 h-px w-12 bg-white/60" />
 
           <p className="max-w-md text-lg leading-8 text-white/75">
-            Cortes clássicos. Estilo moderno. Confiança que se vê e
-            qualidade que se sente.
+            Cortes clássicos. Estilo moderno. Confiança que se vê e qualidade que se
+            sente.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <CtaLink
-              href={whatsappUrl}
-              target="_blank"
-              variant="light"
-            >
+            <CtaLink href={whatsappUrl} target="_blank" variant="light">
               Marcar pelo WhatsApp
             </CtaLink>
 

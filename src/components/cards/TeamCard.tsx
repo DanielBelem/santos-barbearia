@@ -8,7 +8,7 @@ type TeamCardProps = {
 export function TeamCard({ member }: TeamCardProps) {
   return (
     <article>
-      <div className="overflow-hidden bg-charcoal">
+      <div className="bg-charcoal overflow-hidden">
         <ImageWithFallback
           src={member.imageSrc}
           alt={member.imageAlt}
@@ -24,7 +24,7 @@ export function TeamCard({ member }: TeamCardProps) {
           {member.name}
         </h3>
 
-        <p className="mt-1 text-sm text-smoke">{member.role}</p>
+        <p className="text-smoke mt-1 text-sm">{member.role}</p>
       </div>
     </article>
   );

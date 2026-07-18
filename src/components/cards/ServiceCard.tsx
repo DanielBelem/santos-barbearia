@@ -23,23 +23,17 @@ function ServiceIconPlaceholder({
     <div
       aria-hidden="true"
       title={readableLabels[name]}
-      className="mx-auto grid size-16 place-items-center rounded-full border border-white/30 font-display text-xl text-white"
+      className="font-display mx-auto grid size-16 place-items-center rounded-full border border-white/30 text-xl text-white"
     >
       {String(position).padStart(2, '0')}
     </div>
   );
 }
 
-export function ServiceCard({
-  service,
-  position,
-}: ServiceCardProps) {
+export function ServiceCard({ service, position }: ServiceCardProps) {
   return (
     <article className="px-6 py-8 text-center">
-      <ServiceIconPlaceholder
-        name={service.icon}
-        position={position}
-      />
+      <ServiceIconPlaceholder name={service.icon} position={position} />
 
       <h3 className="mt-6 text-sm font-semibold tracking-[0.16em] text-white uppercase">
         {service.title}

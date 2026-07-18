@@ -1,14 +1,6 @@
-import {
-  useEffect,
-  useState,
-  type ImgHTMLAttributes,
-  type SyntheticEvent,
-} from 'react';
+import { useEffect, useState, type ImgHTMLAttributes, type SyntheticEvent } from 'react';
 
-type ImageWithFallbackProps = Omit<
-  ImgHTMLAttributes<HTMLImageElement>,
-  'src'
-> & {
+type ImageWithFallbackProps = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src'> & {
   src: string;
   fallbackSrc?: string;
 };
@@ -25,7 +17,6 @@ export function ImageWithFallback({
     setCurrentSrc(src);
   }, [src]);
 
-
   function handleError(event: SyntheticEvent<HTMLImageElement>) {
     onError?.(event);
 
@@ -34,11 +25,5 @@ export function ImageWithFallback({
     }
   }
 
-  return (
-    <img
-      {...imageProps}
-      src={currentSrc}
-      onError={handleError}
-    />
-  );
+  return <img {...imageProps} src={currentSrc} onError={handleError} />;
 }

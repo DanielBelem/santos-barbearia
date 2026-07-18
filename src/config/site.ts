@@ -39,10 +39,7 @@ export const siteConfig = {
     city: 'São Mamede de Infesta',
     country: 'Portugal',
   },
-  openingHours: [
-    'Segunda a sábado: 09:00–19:30',
-    'Domingo: encerrado',
-  ],
+  openingHours: ['Segunda a sábado: 09:00–19:30', 'Domingo: encerrado'],
   googleMapsUrl: 'https://maps.app.goo.gl/Nzo621sCiMb817hh8',
   socialLinks: [
     {

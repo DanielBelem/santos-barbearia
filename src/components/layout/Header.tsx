@@ -40,14 +40,11 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/10 bg-paper/95 backdrop-blur">
+    <header className="bg-paper/95 sticky top-0 z-50 border-b border-black/10 backdrop-blur">
       <Container className="flex h-20 items-center justify-between">
         <Logo />
 
-        <nav
-          aria-label="Navegação principal"
-          className="hidden lg:block"
-        >
+        <nav aria-label="Navegação principal" className="hidden lg:block">
           <ul className="flex items-center gap-8">
             {navigationItems.map((item) => (
               <li key={item.href}>
@@ -62,11 +59,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <CtaLink
-          href={whatsappUrl}
-          target="_blank"
-          className="hidden lg:inline-flex"
-        >
+        <CtaLink href={whatsappUrl} target="_blank" className="hidden lg:inline-flex">
           Marcar pelo WhatsApp
         </CtaLink>
 
@@ -102,7 +95,7 @@ export function Header() {
         <nav
           id="mobile-navigation"
           aria-label="Navegação móvel"
-          className="fixed inset-x-0 top-20 h-[calc(100dvh-5rem)] overflow-y-auto border-t border-black/10 bg-paper lg:hidden"
+          className="bg-paper fixed inset-x-0 top-20 h-[calc(100dvh-5rem)] overflow-y-auto border-t border-black/10 lg:hidden"
         >
           <Container className="flex min-h-full flex-col py-10">
             <ul className="space-y-2">
@@ -111,7 +104,7 @@ export function Header() {
                   <a
                     href={item.href}
                     onClick={closeMenu}
-                    className="block border-b border-line py-5 font-display text-3xl"
+                    className="border-line font-display block border-b py-5 text-3xl"
                   >
                     {item.label}
                   </a>

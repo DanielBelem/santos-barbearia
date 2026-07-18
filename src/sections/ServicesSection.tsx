@@ -22,11 +22,7 @@ export function ServicesSection() {
 
         <div className="mt-14 grid divide-y divide-white/15 md:grid-cols-2 md:divide-x md:divide-y-0 xl:grid-cols-4">
           {services.map((service, index) => (
-            <ServiceCard
-              key={service.id}
-              service={service}
-              position={index + 1}
-            />
+            <ServiceCard key={service.id} service={service} position={index + 1} />
           ))}
         </div>
 

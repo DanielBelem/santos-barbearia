@@ -27,7 +27,7 @@ export function SectionHeading({
 
       <h2
         id={id}
-        className={`text-balance font-display text-4xl leading-tight sm:text-5xl ${
+        className={`font-display text-4xl leading-tight text-balance sm:text-5xl ${
           inverted ? 'text-white' : 'text-ink'
         }`}
       >

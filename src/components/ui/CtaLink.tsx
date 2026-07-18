@@ -9,14 +9,10 @@ type CtaLinkProps = PropsWithChildren<
 >;
 
 const variantClasses: Record<CtaLinkVariant, string> = {
-  light:
-    'border-white bg-white text-ink hover:border-paper hover:bg-paper',
-  dark:
-    'border-ink bg-ink text-white hover:border-charcoal hover:bg-charcoal',
-  'outline-light':
-    'border-white bg-transparent text-white hover:bg-white hover:text-ink',
-  'outline-dark':
-    'border-ink bg-transparent text-ink hover:bg-ink hover:text-white',
+  light: 'border-white bg-white text-ink hover:border-paper hover:bg-paper',
+  dark: 'border-ink bg-ink text-white hover:border-charcoal hover:bg-charcoal',
+  'outline-light': 'border-white bg-transparent text-white hover:bg-white hover:text-ink',
+  'outline-dark': 'border-ink bg-transparent text-ink hover:bg-ink hover:text-white',
 };
 
 export function CtaLink({
@@ -27,8 +23,7 @@ export function CtaLink({
   rel,
   ...anchorProps
 }: CtaLinkProps) {
-  const safeRel =
-    target === '_blank' ? rel ?? 'noopener noreferrer' : rel;
+  const safeRel = target === '_blank' ? (rel ?? 'noopener noreferrer') : rel;
 
   return (
     <a

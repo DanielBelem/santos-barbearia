@@ -2,15 +2,10 @@ import { Container } from '../components/layout/Container';
 import { CtaLink } from '../components/ui/CtaLink';
 import { ImageWithFallback } from '../components/ui/ImageWithFallback';
 import { siteConfig } from '../config/site';
-import {
-  buildTelephoneUrl,
-  buildWhatsAppUrl,
-} from '../utils/contact';
+import { buildTelephoneUrl, buildWhatsAppUrl } from '../utils/contact';
 
 export function LocationSection() {
-  const telephoneUrl = buildTelephoneUrl(
-    siteConfig.phoneInternational,
-  );
+  const telephoneUrl = buildTelephoneUrl(siteConfig.phoneInternational);
 
   const whatsappUrl = buildWhatsAppUrl(
     siteConfig.phoneInternational,
@@ -30,10 +25,7 @@ export function LocationSection() {
               Onde estamos
             </p>
 
-            <h2
-              id="location-title"
-              className="mt-4 font-display text-5xl"
-            >
+            <h2 id="location-title" className="font-display mt-4 text-5xl">
               Visite-nos.
             </h2>
 
@@ -41,15 +33,11 @@ export function LocationSection() {
               <p>
                 {siteConfig.address.street}
                 <br />
-                {siteConfig.address.postalCode}{' '}
-                {siteConfig.address.city}
+                {siteConfig.address.postalCode} {siteConfig.address.city}
               </p>
 
               <p>
-                <a
-                  href={telephoneUrl}
-                  className="transition-colors hover:text-white"
-                >
+                <a href={telephoneUrl} className="transition-colors hover:text-white">
                   {siteConfig.phoneDisplay}
                 </a>
               </p>
@@ -81,11 +69,7 @@ export function LocationSection() {
                 Ver no Google Maps
               </CtaLink>
 
-              <CtaLink
-                href={whatsappUrl}
-                target="_blank"
-                variant="light"
-              >
+              <CtaLink href={whatsappUrl} target="_blank" variant="light">
                 WhatsApp
               </CtaLink>
             </div>
@@ -109,7 +93,7 @@ export function LocationSection() {
 
             <div className="absolute inset-0 bg-black/20 transition-colors group-hover:bg-black/5" />
 
-            <span className="absolute top-1/2 left-1/2 -translate-1/2 bg-white px-5 py-3 text-xs font-semibold tracking-wide text-ink uppercase shadow-xl">
+            <span className="text-ink absolute top-1/2 left-1/2 -translate-1/2 bg-white px-5 py-3 text-xs font-semibold tracking-wide uppercase shadow-xl">
               Santos Barbearia
             </span>
           </a>

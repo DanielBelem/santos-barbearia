@@ -5,11 +5,7 @@ import { teamMembers } from '../data/team';
 
 export function TeamSection() {
   return (
-    <section
-      id="equipa"
-      aria-labelledby="team-title"
-      className="bg-paper py-20 sm:py-28"
-    >
+    <section id="equipa" aria-labelledby="team-title" className="bg-paper py-20 sm:py-28">
       <Container>
         <SectionHeading
           id="team-title"
