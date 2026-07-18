@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Header } from './components/layout/Header'
+import { HeroSection } from './sections/HeroSection'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -7,24 +8,7 @@ function App() {
   return (
     <>
       <Header />
-
-      <section id="center">
-        <div className="hero">
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+      <HeroSection />
 
       <div className="ticks"></div>
 
