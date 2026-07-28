@@ -82,7 +82,7 @@ export function LocationSection() {
               title="Mapa da Santos Barbearia"
               src={mapEmbedUrl}
               loading="lazy"
-              className="h-full w-full border-none grayscale contrast-[0.92] opacity-95"
+              className="h-full w-full border-none opacity-95 contrast-[0.92] grayscale"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
             />

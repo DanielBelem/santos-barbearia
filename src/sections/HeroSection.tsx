@@ -17,11 +17,11 @@ export function HeroSection() {
       className="bg-ink relative isolate min-h-[42rem] overflow-hidden text-white"
     >
       <ImageWithFallback
-        src="/images/hero.webp"
-        alt=""
+        src="/images/barbearia_black_white.png"
+        alt="Imagem de Santos Barbearia em preto e branco"
         aria-hidden="true"
         fetchPriority="high"
-        className="absolute inset-0 -z-20 size-full object-cover object-center grayscale"
+        className="absolute inset-0 -z-20 translate-y-[30%] size-full object-cover object-center object-bottom grayscale scale-[0.98]"
       />
 
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-black/20" />

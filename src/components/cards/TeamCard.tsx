@@ -7,15 +7,15 @@ type TeamCardProps = {
 
 export function TeamCard({ member }: TeamCardProps) {
   return (
-    <article>
-      <div className="bg-charcoal overflow-hidden">
+    <article className="mx-auto w-full max-w-[22rem]">
+      <div className="mx-auto overflow-hidden bg-charcoal">
         <ImageWithFallback
           src={member.imageSrc}
           alt={member.imageAlt}
           loading="lazy"
           width={700}
           height={850}
-          className="aspect-[4/5] size-full object-cover grayscale transition duration-500 hover:scale-[1.03] hover:grayscale-0 motion-reduce:transition-none"
+          className="mx-auto aspect-[4/5] w-full max-w-[22rem] object-cover grayscale transition duration-500 hover:scale-[1.03] hover:grayscale-0 motion-reduce:transition-none"
         />
       </div>
 

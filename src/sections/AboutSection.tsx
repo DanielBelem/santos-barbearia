@@ -27,12 +27,12 @@ export function AboutSection() {
             />
 
             <ImageWithFallback
-              src="/images/barbershop-interior.webp"
-              alt="Interior da Santos Barbearia, com cadeiras de barbeiro e espelhos."
+              src="/images/magal_cutting_black_white.png"
+              alt="Magal cortando cabelo em preto e branco"
               loading="lazy"
               width={1400}
               height={900}
-              className="relative aspect-[14/9] size-full object-cover grayscale"
+              className="relative aspect-[14/9] size-full object-cover object-center grayscale scale-[0.98]"
             />
           </div>
         </div>

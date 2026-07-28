@@ -13,7 +13,7 @@ export function TeamSection() {
           title="Profissionais apaixonados pelo que fazem."
         />
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 flex flex-wrap justify-center gap-8">
           {teamMembers.map((member) => (
             <TeamCard key={member.id} member={member} />
           ))}
