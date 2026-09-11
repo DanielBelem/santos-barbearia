@@ -59,9 +59,11 @@ export function Header() {
           </ul>
         </nav>
 
-        <CtaLink href={whatsappUrl} target="_blank" className="hidden lg:inline-flex">
-          Marcar pelo WhatsApp
-        </CtaLink>
+        <div className="hidden lg:block">
+          <CtaLink href={whatsappUrl} target="_blank">
+            Marcar pelo WhatsApp
+          </CtaLink>
+        </div>
 
         <button
           type="button"
@@ -92,37 +94,28 @@ export function Header() {
       </Container>
 
       {isMenuOpen ? (
-        <nav
-          id="mobile-navigation"
-          aria-label="Navegação móvel"
-          className="bg-paper fixed inset-x-0 top-20 h-[calc(100dvh-5rem)] overflow-y-auto border-t border-black/10 lg:hidden"
-        >
-          <Container className="flex min-h-full flex-col py-10">
-            <ul className="space-y-2">
-              {navigationItems.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={closeMenu}
-                    className="border-line font-display block border-b py-5 text-3xl"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            <CtaLink
-              href={whatsappUrl}
-              target="_blank"
+  <nav
+    id="mobile-navigation"
+    aria-label="Navegação móvel"
+    className="bg-paper fixed inset-x-0 top-16 h-[calc(100dvh-4rem)] overflow-y-auto border-t border-black/10 lg:hidden"
+  >
+    <Container className="flex min-h-full flex-col py-10">
+      <ul className="space-y-2">
+        {navigationItems.map((item) => (
+          <li key={item.href}>
+            <a
+              href={item.href}
               onClick={closeMenu}
-              className="mt-10 w-full"
+              className="border-line font-display block border-b py-5 text-3xl"
             >
-              Marcar pelo WhatsApp
-            </CtaLink>
-          </Container>
-        </nav>
-      ) : null}
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Container>
+  </nav>
+) : null}
     </header>
   );
 }
