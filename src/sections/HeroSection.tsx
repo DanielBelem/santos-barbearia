@@ -28,21 +28,21 @@ export function HeroSection() {
 
       <Container className="flex min-h-[42rem] items-center py-20">
         <div className="max-w-2xl">
-          <p className="mb-5 text-xs font-semibold tracking-[0.2em] text-white/65 uppercase">
+          <p className="mb-5 text-xs font-normal tracking-[0.2em] text-white/80 uppercase sm:text-2xl">
             Bem-vindo à
           </p>
 
           <h1
             id="hero-title"
-            className="font-display text-6xl leading-[0.92] sm:text-7xl lg:text-8xl"
+            className="font-display text-7xl font-semibold leading-[0.85] tracking-[-0.02em] uppercase sm:text-8xl lg:text-9xl"
           >
             Santos
-            <span className="font-body mt-3 block text-xl font-normal tracking-[0.3em] uppercase sm:text-2xl">
+            <span className="font-body mt-3 block text-xl font-normal uppercase sm:text-2xl">
               Barbearia
             </span>
           </h1>
 
-          <div aria-hidden="true" className="my-8 h-px w-12 bg-white/60" />
+          <div aria-hidden="true" className="my-8 h-px w-80 bg-white/60" />
           
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <CtaLink href={whatsappUrl} target="_blank" variant="light">
