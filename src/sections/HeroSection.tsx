@@ -21,7 +21,7 @@ export function HeroSection() {
         alt="Imagem de Santos Barbearia em preto e branco"
         aria-hidden="true"
         fetchPriority="high"
-         className="absolute inset-0 -z-20 size-full object-cover object-[100%_85%] grayscale"
+        className="absolute inset-0 -z-20 size-full object-cover object-[100%_85%] grayscale"
       />
 
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-black/20" />

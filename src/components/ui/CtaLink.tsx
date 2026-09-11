@@ -11,12 +11,9 @@ type CtaLinkProps = PropsWithChildren<
 const variantClasses: Record<CtaLinkVariant, string> = {
   light:
     'border-white bg-white text-ink hover:border-white hover:bg-black hover:text-white',
-  dark:
-    'border-ink bg-ink text-white hover:border-ink hover:bg-white hover:text-ink',
-  'outline-light':
-    'border-white bg-transparent text-white hover:bg-white hover:text-ink',
-  'outline-dark':
-    'border-ink bg-transparent text-ink hover:bg-ink hover:text-white',
+  dark: 'border-ink bg-ink text-white hover:border-ink hover:bg-white hover:text-ink',
+  'outline-light': 'border-white bg-transparent text-white hover:bg-white hover:text-ink',
+  'outline-dark': 'border-ink bg-transparent text-ink hover:bg-ink hover:text-white',
 };
 
 export function CtaLink({

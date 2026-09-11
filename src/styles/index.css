@@ -71,6 +71,9 @@
   #sobre {
     scroll-margin-top: 75px;
   }
+  #servicos {
+    scroll-margin-top: 80px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

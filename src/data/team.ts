@@ -31,8 +31,7 @@ export const teamMembers = [
     role: 'Pigmentação Capilar - Alisamentos & Progressivas - Tratamentos & Reconstrução',
     imageSrc: '/images/erica_santos.png',
     imageAlt: 'Erica Carvalho',
-    eyebrow:
-      'Hairdresser',
+    eyebrow: 'Hairdresser',
     bio: [
       'Com mais de 10 anos de experiência na área da beleza, Erica Carvalho é especialista em transformar e valorizar a imagem das suas clientes através de técnicas modernas e de um atendimento personalizado.',
       'Especializada em pigmentação capilar, alisamentos e progressivas, tratamentos químicos, hidratações profundas, reconstruções e recuperação da fibra capilar, trabalha com foco na saúde e beleza dos cabelos, proporcionando resultados duradouros e naturais.',

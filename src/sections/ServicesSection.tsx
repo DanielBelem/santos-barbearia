@@ -2,8 +2,16 @@ import { Container } from '../components/layout/Container';
 import { ServiceCard } from '../components/cards/ServiceCard';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { services } from '../data/services';
+import { CtaLink } from '../components/ui/CtaLink';
+import { siteConfig } from '../config/site';
+import { buildWhatsAppUrl } from '../utils/contact';
 
 export function ServicesSection() {
+  const whatsappUrl = buildWhatsAppUrl(
+    siteConfig.phoneInternational,
+    siteConfig.whatsappMessage,
+  );
+
   return (
     <section
       id="servicos"
@@ -23,6 +31,11 @@ export function ServicesSection() {
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} position={index + 1} />
           ))}
+        </div>
+        <div className="mt-5 flex justify-center">
+          <CtaLink href={whatsappUrl} target="_blank" variant="light">
+            Consultar Preços
+          </CtaLink>
         </div>
       </Container>
     </section>

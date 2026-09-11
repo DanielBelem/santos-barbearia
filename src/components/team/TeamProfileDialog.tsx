@@ -47,10 +47,9 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
       onClose={handleClose}
       onClick={handleBackdropClick}
       aria-labelledby="professional-name"
-      className="m-auto h-[min(90vh,850px)] w-[min(94vw,1100px)] max-w-none overflow-hidden bg-transparent p-0  backdrop:bg-black/60 backdrop:backdrop-blur-sm"
+      className="m-auto h-[min(90vh,850px)] w-[min(94vw,1100px)] max-w-none overflow-hidden bg-transparent p-0 backdrop:bg-black/60 backdrop:backdrop-blur-sm"
     >
       <div className="grid h-full overflow-hidden bg-white shadow-2xl lg:grid-cols-[0.95fr_1.05fr]">
-
         <div className="relative hidden overflow-hidden bg-black lg:block">
           <ImageWithFallback
             src={member.imageSrc}
@@ -59,9 +58,7 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
           />
         </div>
 
-
         <div className="relative flex min-h-0 flex-col">
-
           <button
             type="button"
             onClick={() => dialogRef.current?.close()}
@@ -72,15 +69,13 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
           </button>
 
           <div className="min-h-0 flex-1 overflow-y-auto px-7 py-10 sm:px-12 sm:py-12 lg:px-16">
-
             <div className="mb-9 overflow-hidden lg:hidden">
               <ImageWithFallback
                 src={member.imageSrc}
                 alt={member.imageAlt}
-                className="aspect-[4/5] w-full object-cover object-center grayscale"
+                className="aspect-4/5 w-full object-cover object-center grayscale"
               />
             </div>
-
 
             <header className="pr-12">
               <p className="text-xs font-semibold tracking-[0.28em] text-neutral-500 uppercase">
@@ -111,7 +106,6 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
               </div>
             </section>
 
-
             <section className="mt-10">
               <h3 className="text-xs font-semibold tracking-[0.14em] uppercase">
                 Serviços disponíveis
@@ -121,7 +115,7 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
                 {member.services.map((service) => (
                   <span
                     key={service}
-                    className="border border-black/10 bg-[#f5f3ef] px-4 py-3 text-xs font-medium tracking-[0.05em] uppercase"
+                    className="border border-black/10 bg-[#f5f3ef] px-4 py-3 text-xs font-medium tracking-wider uppercase"
                   >
                     {service}
                   </span>

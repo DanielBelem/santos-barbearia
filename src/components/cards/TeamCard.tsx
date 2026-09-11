@@ -12,18 +12,25 @@ export function TeamCard({ member, onSelect }: TeamCardProps) {
       <button
         type="button"
         onClick={() => onSelect(member)}
-        aria-label={`Ver perfil de ${member.name}`}
+        aria-label={`Abrir perfil de ${member.name}`}
         className="group block w-full cursor-pointer text-left"
       >
-        <div className="bg-charcoal mx-auto overflow-hidden">
+        <div className="bg-charcoal relative mx-auto overflow-hidden">
           <ImageWithFallback
             src={member.imageSrc}
             alt={member.imageAlt}
             loading="lazy"
             width={700}
             height={850}
-            className="mx-auto aspect-[4/5] w-full max-w-[22rem] object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0 motion-reduce:transition-none"
+            className="aspect-[4/5] w-full object-cover object-center grayscale transition duration-500 group-hover:scale-[1.02] group-hover:blur-[2px] motion-reduce:transition-none"
           />
+          <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/25" />
+          <span
+            aria-hidden="true"
+            className="absolute top-1/2 left-1/2 grid size-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/80 bg-black/35 text-2xl font-light text-white opacity-0 backdrop-blur-md transition duration-300 group-hover:opacity-100"
+          >
+            +
+          </span>
         </div>
 
         <div className="pt-5 text-center">
@@ -32,7 +39,6 @@ export function TeamCard({ member, onSelect }: TeamCardProps) {
           </h3>
 
           <p className="text-smoke mt-1 text-sm">{member.role}</p>
-
         </div>
       </button>
     </article>
