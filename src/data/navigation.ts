@@ -9,15 +9,11 @@ export const navigationItems = [
     href: '#inicio',
   },
   {
-    label: 'Sobre nós',
-    href: '#sobre',
-  },
-  {
     label: 'Serviços',
     href: '#servicos',
   },
   {
-    label: 'Barbeiros',
+    label: 'Profissionais',
     href: '#equipa',
   },
   {
