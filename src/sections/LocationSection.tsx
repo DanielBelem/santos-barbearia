@@ -56,8 +56,7 @@ export function LocationSection() {
                 <a
                   href={`mailto:${siteConfig.email}`}
                   className="transition-colors hover:text-white"
-                >
-                </a>
+                ></a>
               </p>
             </address>
 

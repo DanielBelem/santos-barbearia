@@ -34,7 +34,7 @@ export function HeroSection() {
 
           <h1
             id="hero-title"
-            className="font-display text-7xl font-semibold leading-[0.85] tracking-[-0.02em] uppercase sm:text-8xl lg:text-9xl"
+            className="font-display text-7xl leading-[0.85] font-semibold tracking-[-0.02em] uppercase sm:text-8xl lg:text-9xl"
           >
             Santos
             <span className="font-body mt-3 block text-xl font-normal uppercase sm:text-2xl">
@@ -43,7 +43,7 @@ export function HeroSection() {
           </h1>
 
           <div aria-hidden="true" className="my-8 h-px w-80 bg-white/60" />
-          
+
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <CtaLink href={whatsappUrl} target="_blank" variant="light">
               Marcar pelo WhatsApp

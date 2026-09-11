@@ -17,7 +17,7 @@ export function AboutSection() {
 
             <div className="mt-12 flex justify-center">
               <CtaLink href="#equipa" variant="dark">
-              Conheça a nossa equipa
+                Conheça a nossa equipa
               </CtaLink>
             </div>
           </div>
@@ -34,7 +34,7 @@ export function AboutSection() {
               loading="lazy"
               width={1400}
               height={900}
-              className="relative aspect-[14/9] size-full object-cover object-center grayscale scale-[0.98]"
+              className="relative aspect-[14/9] size-full scale-[0.98] object-cover object-center grayscale"
             />
           </div>
         </div>

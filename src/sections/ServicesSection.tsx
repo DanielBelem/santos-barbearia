@@ -1,6 +1,5 @@
 import { Container } from '../components/layout/Container';
 import { ServiceCard } from '../components/cards/ServiceCard';
-import { CtaLink } from '../components/ui/CtaLink';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { services } from '../data/services';
 
@@ -25,7 +24,6 @@ export function ServicesSection() {
             <ServiceCard key={service.id} service={service} position={index + 1} />
           ))}
         </div>
-
       </Container>
     </section>
   );
