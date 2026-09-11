@@ -9,13 +9,6 @@ import { TeamSection } from './sections/TeamSection';
 function App() {
   return (
     <>
-      <a
-        href="#conteudo-principal"
-        className="text-ink fixed top-3 left-3 z-[100] -translate-y-24 bg-white px-4 py-3 text-sm font-semibold shadow-lg transition-transform focus:translate-y-0"
-      >
-        Saltar para o conteúdo principal
-      </a>
-
       <Header />
 
       <main id="conteudo-principal">

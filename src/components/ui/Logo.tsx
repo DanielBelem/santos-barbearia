@@ -4,7 +4,7 @@ export function Logo() {
       <img
         src="/images/santos_logo_transp.png"
         alt="Santos Barbearia"
-        className="h-28 w-auto sm:h-36"
+        className="h-28 w-auto sm:h-33"
       />
     </a>
   );
