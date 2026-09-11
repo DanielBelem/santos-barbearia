@@ -2,7 +2,7 @@ type LogoProps = {
   inverted?: boolean;
 };
 
-export function Logo({ inverted = false }: LogoProps) {
+export function Logo({ _inverted = false }: LogoProps) {
   return (
     <a href="#inicio" aria-label="Santos Barbearia — voltar ao início" className="block">
       <img
