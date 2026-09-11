@@ -1,39 +1,20 @@
-import type { Service, ServiceIconName } from '../../data/services';
+import type { Service } from '../../data/services';
 
 type ServiceCardProps = {
   service: Service;
   position: number;
 };
 
-function ServiceIconPlaceholder({
-  name,
-  position,
-}: {
-  name: ServiceIconName;
-  position: number;
-}) {
-  const readableLabels: Record<ServiceIconName, string> = {
-    haircut: 'Corte',
-    beard: 'Barba',
-    complete: 'Completo',
-    care: 'Cuidados',
-  };
-
-  return (
-    <div
-      aria-hidden="true"
-      title={readableLabels[name]}
-      className="font-display mx-auto grid size-16 place-items-center rounded-full border border-white/30 text-xl text-white"
-    >
-      {String(position).padStart(2, '0')}
-    </div>
-  );
-}
-
-export function ServiceCard({ service, position }: ServiceCardProps) {
+export function ServiceCard({ service, position: _position }: ServiceCardProps) {
   return (
     <article className="px-6 py-8 text-center">
-      <ServiceIconPlaceholder name={service.icon} position={position} />
+      <div className="mx-auto grid size-16 place-items-center overflow-hidden rounded-full border border-white/30 bg-white">
+        <img
+          src={service.imageSrc}
+          alt={service.imageAlt}
+          className="h-full w-full object-cover"
+        />
+      </div>
 
       <h3 className="mt-6 text-sm font-semibold tracking-[0.16em] text-white uppercase">
         {service.title}

@@ -19,18 +19,9 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Logo />
-
-            <p className="text-smoke mt-5 max-w-xs text-sm leading-6">
-              Tradição, técnica e cuidado num espaço pensado para si.
-            </p>
-          </div>
-
-          <div>
             <h2 className="text-xs font-semibold tracking-[0.15em] uppercase">
               Navegação
             </h2>
-
             <ul className="text-smoke mt-5 space-y-3 text-sm">
               {navigationItems.map((item) => (
                 <li key={item.href}>
@@ -41,7 +32,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-
+          
           <div>
             <h2 className="text-xs font-semibold tracking-[0.15em] uppercase">
               Contactos
@@ -78,7 +69,7 @@ export function Footer() {
 
           <div>
             <h2 className="text-xs font-semibold tracking-[0.15em] uppercase">
-              Redes sociais
+              Presença digital
             </h2>
 
             <ul className="text-smoke mt-5 flex flex-wrap gap-4 text-sm">
@@ -102,6 +93,8 @@ export function Footer() {
           <p>
             © {currentYear} {siteConfig.name}. Todos os direitos reservados.
           </p>
+        </div>
+        <div className="  ">
         </div>
       </Container>
     </footer>

@@ -11,8 +11,8 @@ export function AboutSection() {
           <div>
             <SectionHeading
               eyebrow="Sobre nós"
-              title="Mais que um corte, uma experiência."
-              description="Na Santos Barbearia, cada detalhe importa. Unimos técnica, tradição e um ambiente acolhedor para oferecer o melhor serviço e realçar o melhor de cada cliente."
+              title="Mais de 10 anos a cuidar do seu estilo."
+              description="Na Santos Barbearia, unimos técnica, tradição e um ambiente acolhedor para oferecer um serviço 100% personalizado e excecional."
             />
 
             <CtaLink href="#equipa" className="mt-8" variant="dark">
@@ -28,7 +28,7 @@ export function AboutSection() {
 
             <ImageWithFallback
               src="/images/magal_cutting_black_white.png"
-              alt="Magal cortando cabelo em preto e branco"
+              alt="Magal a cortar cabelo em preto e branco"
               loading="lazy"
               width={1400}
               height={900}

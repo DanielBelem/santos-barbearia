@@ -21,7 +21,7 @@ export function HeroSection() {
         alt="Imagem de Santos Barbearia em preto e branco"
         aria-hidden="true"
         fetchPriority="high"
-        className="absolute inset-0 -z-20 translate-y-[30%] size-full object-cover object-center object-bottom grayscale scale-[0.98]"
+        className="absolute inset-0 -z-20 size-full translate-y-[30%] scale-[0.98] object-cover object-bottom object-center grayscale"
       />
 
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-black/20" />
@@ -43,12 +43,7 @@ export function HeroSection() {
           </h1>
 
           <div aria-hidden="true" className="my-8 h-px w-12 bg-white/60" />
-
-          <p className="max-w-md text-lg leading-8 text-white/75">
-            Cortes clássicos. Estilo moderno. Confiança que se vê e qualidade que se
-            sente.
-          </p>
-
+          
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <CtaLink href={whatsappUrl} target="_blank" variant="light">
               Marcar pelo WhatsApp

@@ -8,7 +8,7 @@ type TeamCardProps = {
 export function TeamCard({ member }: TeamCardProps) {
   return (
     <article className="mx-auto w-full max-w-[22rem]">
-      <div className="mx-auto overflow-hidden bg-charcoal">
+      <div className="bg-charcoal mx-auto overflow-hidden">
         <ImageWithFallback
           src={member.imageSrc}
           alt={member.imageAlt}

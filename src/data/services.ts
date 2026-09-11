@@ -4,7 +4,8 @@ export type Service = {
   id: string;
   title: string;
   description: string;
-  icon: ServiceIconName;
+  imageSrc: string;
+  imageAlt: string;
 };
 
 export const services = [
@@ -13,24 +14,28 @@ export const services = [
     title: 'Corte de cabelo',
     description:
       'Cortes modernos e clássicos, adaptados ao formato do rosto e ao estilo de cada cliente.',
-    icon: 'haircut',
+    imageSrc: '/images/cut.png',
+    imageAlt: 'Haircut',
   },
   {
     id: 'beard',
     title: 'Barba',
     description: 'Aparagem, desenho e modelação da barba, com acabamento cuidado.',
-    icon: 'beard',
+    imageSrc: '/images/beard.png',
+    imageAlt: 'Beard Trim',
   },
   {
     id: 'complete',
     title: 'Ritual completo',
     description: 'Corte, barba, toalha quente e finalização para um resultado completo.',
-    icon: 'complete',
+    imageSrc: '/images/complete.png',
+    imageAlt: 'Full Service',
   },
   {
     id: 'care',
     title: 'Cuidados',
     description: 'Seleção de produtos profissionais para cabelo, barba e pele.',
-    icon: 'care',
+    imageSrc: '/images/care.png',
+    imageAlt: 'Produtos de cuidados',
   },
 ] satisfies readonly Service[];

@@ -26,11 +26,6 @@ export function ServicesSection() {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <CtaLink href="#contactos" variant="outline-light">
-            Marcar um serviço
-          </CtaLink>
-        </div>
       </Container>
     </section>
   );
