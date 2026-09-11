@@ -60,7 +60,7 @@ export function LocationSection() {
               </p>
             </address>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+            <div className="mt-8 hidden flex-col gap-3 lg:flex xl:flex-row">
               <CtaLink
                 href={siteConfig.googleMapsUrl}
                 target="_blank"
@@ -74,18 +74,33 @@ export function LocationSection() {
               </CtaLink>
             </div>
           </div>
+          <div className="flex flex-col">
+            <div className="group relative min-h-96 overflow-hidden border border-white/10">
+              <iframe
+                title="Mapa da Santos Barbearia"
+                src={mapEmbedUrl}
+                loading="lazy"
+                className="h-full w-full border-none opacity-95 contrast-[0.92] grayscale"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
 
-          <div className="group relative min-h-96 overflow-hidden border border-white/10">
-            <iframe
-              title="Mapa da Santos Barbearia"
-              src={mapEmbedUrl}
-              loading="lazy"
-              className="h-full w-full border-none opacity-95 contrast-[0.92] grayscale"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+              <div className="pointer-events-none absolute inset-0 bg-black/15" />
+            </div>
 
-            <div className="pointer-events-none absolute inset-0 bg-black/15" />
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center lg:hidden">
+              <CtaLink
+                href={siteConfig.googleMapsUrl}
+                target="_blank"
+                variant="outline-light"
+              >
+                Ver no Google Maps
+              </CtaLink>
+
+              <CtaLink href={whatsappUrl} target="_blank" variant="light">
+                WhatsApp
+              </CtaLink>
+            </div>
           </div>
         </div>
       </Container>

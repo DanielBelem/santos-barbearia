@@ -15,7 +15,7 @@ export function AboutSection() {
               description="Na Santos Barbearia, unimos técnica, tradição e um ambiente acolhedor para oferecer um serviço 100% personalizado e excecional."
             />
 
-            <div className="mt-12 flex justify-center">
+            <div className="mt-12 hidden justify-center sm:flex">
               <CtaLink href="#equipa" variant="dark">
                 Conheça a nossa equipa
               </CtaLink>

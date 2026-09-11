@@ -41,7 +41,7 @@ export function Header() {
 
   return (
     <header className="bg-paper/95 sticky top-0 z-50 border-b border-black/10 backdrop-blur">
-      <Container className="flex h-20 items-center justify-between">
+      <Container className="flex h-16 items-center justify-between sm:h-18">
         <Logo />
 
         <nav aria-label="Navegação principal" className="hidden lg:block">

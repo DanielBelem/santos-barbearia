@@ -27,7 +27,7 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-black/20" />
 
       <Container className="flex min-h-[42rem] items-center py-20">
-        <div className="max-w-2xl">
+        <div className="w-full max-w-2xl text-center sm:text-left">
           <p className="mb-5 text-xs font-normal tracking-[0.2em] text-white/80 uppercase sm:text-2xl">
             Bem-vindo à
           </p>
@@ -42,9 +42,12 @@ export function HeroSection() {
             </span>
           </h1>
 
-          <div aria-hidden="true" className="my-8 h-px w-80 bg-white/60" />
+          <div
+            aria-hidden="true"
+            className="mx-auto my-8 h-px w-80 bg-white/60 sm:mx-0"
+          />
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-stretch">
             <CtaLink href={whatsappUrl} target="_blank" variant="light">
               Marcar pelo WhatsApp
             </CtaLink>
