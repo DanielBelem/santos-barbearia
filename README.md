@@ -1,73 +1,124 @@
-# React + TypeScript + Vite
+# Santos Barbearia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website institucional desenvolvido para a **Santos Barbearia**, com foco em presença digital, apresentação dos profissionais, serviços, contactos e marcações através de WhatsApp.
 
-Currently, two official plugins are available:
+O projeto foi desenvolvido como um trabalho freelance real, desde a recolha de requisitos e tratamento do conteúdo até à implementação responsive e publicação em produção.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Live website
 
-## React Compiler
+[https://santosbarbearia.pt](https://santos-barbearia.netlify.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![Santos Barbearia website preview](./docs/desktop-preview.png)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## About the project
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Santos Barbearia needed a simple and modern website that could present the business professionally while keeping the user journey straightforward.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The main goals were:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+- Present the barbershop and its identity.
+- Showcase the professionals and their specialties.
+- Allow visitors to explore detailed professional profiles.
+- Display business information such as address, opening hours and contact details.
+- Provide direct access to WhatsApp for bookings.
+- Integrate the barbershop's Google Maps location.
+- Provide a good experience across desktop, tablet and mobile devices.
+- Keep infrastructure and maintenance simple for a small local business.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+The website is intentionally implemented as a static frontend application, since the business does not currently require authentication, a database or a dedicated backend.
+
+---
+
+## Tech stack
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+### Quality and tooling
+
+- ESLint
+- Prettier
+- Git
+- GitHub
+
+### Production
+
+- Netlify
+- Automatic HTTPS
+- Continuous deployment from GitHub
+
+### Integrations
+
+- WhatsApp deep links
+- Google Maps Embed
+- Telephone links
+- Email links
+
+---
+
+## Main features
+
+### Responsive layout
+
+The website was designed to work across:
+
+- Mobile phones
+- Laptops
+- Desktop displays
+
+Several sections have specific mobile behavior instead of simply shrinking the desktop interface.
+
+Examples include:
+
+- Centered hero content on mobile.
+- Simplified mobile navigation.
+- Reduced footer footprint.
+- Responsive professional profile dialogs.
+- Repositioned location actions on mobile.
+- Different image positioning according to viewport size.
+
+---
+
+### Professional profiles
+
+Each professional has an interactive profile containing:
+
+- Professional photograph
+- Name
+- Role and specialties
+- Biography
+- Available services
+
+The profile is displayed inside a responsive modal.
+
+On desktop, the image and content are presented side by side.
+
+On mobile, the profile becomes a vertically scrollable layout better suited to smaller screens.
+
+---
+
+### WhatsApp booking
+
+Booking actions use dynamically generated WhatsApp URLs.
+
+Example:
+
+```ts
+export function buildWhatsAppUrl(
+  phoneNumber: string,
+  message: string,
+): string {
+  const normalizedPhone = phoneNumber.replace(/\D/g, '');
+
+  return `https://wa.me/${normalizedPhone}?text=${encodeURIComponent(
+    message.trim(),
+  )}`;
+}
