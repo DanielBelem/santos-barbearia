@@ -10,7 +10,7 @@ O projeto foi desenvolvido como um trabalho freelance real, desde a recolha de r
 
 
 
-![Santos Barbearia website preview](./docs/desktop-preview.png)
+![Santos Barbearia website preview](./public/images/preview.png)
 
 ---
 
