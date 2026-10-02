@@ -10,109 +10,110 @@ O projeto foi desenvolvido como um trabalho freelance real, desde a recolha de r
 
 ![Santos Barbearia website preview](./public/images/preview.png)
 
----
+## Funcionalidades
 
-## About the project
+- Apresentação da barbearia e dos serviços disponíveis.
+- Cartões da equipa com perfis individuais em modal: fotografia, biografia e especialidades.
+- Contacto através de WhatsApp e telefone.
+- Morada, horários de funcionamento e mapa Google Maps incorporado.
+- Ligações para abrir a localização no Google Maps.
+- Layout adaptado a dispositivos móveis e desktop.
 
-Santos Barbearia needed a simple and modern website that could present the business professionally while keeping the user journey straightforward.
+Os pedidos de marcação são encaminhados para o WhatsApp. O website não gere disponibilidade, reservas, pagamentos ou contas de utilizador.
 
-The main goals were:
+## Tecnologias
 
-- Present the barbershop and its identity.
-- Showcase the professionals and their specialties.
-- Allow visitors to explore detailed professional profiles.
-- Display business information such as address, opening hours and contact details.
-- Provide direct access to WhatsApp for bookings.
-- Integrate the barbershop's Google Maps location.
-- Provide a good experience across desktop, tablet and mobile devices.
-- Keep infrastructure and maintenance simple for a small local business.
+| Tecnologia | Utilização |
+| --- | --- |
+| React | Composição da interface e gestão do estado de interação |
+| TypeScript | Tipagem de propriedades, modelos de conteúdo e funções |
+| Tailwind CSS | Estilos, breakpoints e estados de interação |
+| HTML semântico | Estrutura da página, contactos e diálogo nativo |
+| Google Maps | Visualização da localização através de um iframe |
 
-The website is intentionally implemented as a static frontend application, since the business does not currently require authentication, a database or a dedicated backend.
+## Arquitetura
 
----
+A aplicação separa a composição da página, os componentes reutilizáveis, os dados do negócio e as funções auxiliares.
 
-## Tech stack
+| Localização | Responsabilidade |
+| --- | --- |
+| `src/App.tsx` | Composição do cabeçalho, secções e rodapé |
+| `src/sections/` | Secções principais: início, apresentação, serviços, equipa e contactos |
+| `src/components/layout/` | Elementos estruturais, como `Header`, `Footer` e `Container` |
+| `src/components/ui/` | Elementos reutilizáveis, como `CtaLink`, `SectionHeading` e `ImageWithFallback` |
+| `src/components/cards/` | Apresentação de serviços e profissionais |
+| `src/components/team/` | Diálogo de apresentação de cada profissional |
+| `src/data/` | Conteúdo tipado dos serviços e da equipa |
+| `src/config/site.ts` | Contactos, morada, horários e configuração do estabelecimento |
+| `src/utils/contact.ts` | Construção dos URLs de contacto |
+| `public/images/` | Fotografias e imagens utilizadas na interface |
 
-### Frontend
+### Estado e fluxo de dados
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
+O estado do perfil selecionado pertence a `TeamSection`. Ao selecionar um cartão, o componente atualiza o profissional ativo e passa os seus dados a `TeamProfileDialog`. Ao fechar o diálogo, a seleção regressa a `null`.
 
-### Quality and tooling
+Esta interação é local à secção da equipa e não necessita de uma biblioteca de estado global.
 
-- ESLint
-- Prettier
-- Git
-- GitHub
+### Decisões técnicas
 
-### Production
+- **Conteúdo estático:** o âmbito atual é institucional. Manter os dados no código permite uma publicação simples, sem um serviço de backend ou base de dados para administrar.
+- **Modelos tipados:** os tipos `TeamMember` e `Service` definem os dados esperados pelos componentes. A lista da equipa utiliza `satisfies` para verificar a sua conformidade com o modelo.
+- **Componentes reutilizáveis:** elementos comuns centralizam a apresentação e reduzem duplicação entre secções.
+- **Configuração centralizada:** contactos e informação do estabelecimento podem ser atualizados sem procurar os mesmos valores em vários componentes.
+- **Diálogo nativo:** o perfil utiliza `<dialog>` e `showModal()`, aproveitando o comportamento modal disponibilizado pelo navegador.
+- **Navegação por âncoras:** as secções pertencem à mesma página; o âmbito atual não exige um router.
 
-- Netlify
-- Automatic HTTPS
-- Continuous deployment from GitHub
+## Executar localmente
 
-### Integrations
+É necessário ter Node.js e um gestor de pacotes compatíveis com o `package.json` e o lockfile do repositório.
 
-- WhatsApp deep links
-- Google Maps Embed
-- Telephone links
-- Email links
+Depois de obter o código e abrir um terminal na raiz do projeto, consulte os scripts disponíveis:
 
----
-
-## Main features
-
-### Responsive layout
-
-The website was designed to work across:
-
-- Mobile phones
-- Laptops
-- Desktop displays
-
-Several sections have specific mobile behavior instead of simply shrinking the desktop interface.
-
-Examples include:
-
-- Centered hero content on mobile.
-- Simplified mobile navigation.
-- Reduced footer footprint.
-- Responsive professional profile dialogs.
-- Repositioned location actions on mobile.
-- Different image positioning according to viewport size.
-
----
-
-### Professional profiles
-
-Each professional has an interactive profile containing:
-
-- Professional photograph
-- Name
-- Role and specialties
-- Biography
-- Available services
-
-The profile is displayed inside a responsive modal.
-
-On desktop, the image and content are presented side by side.
-
-On mobile, the profile becomes a vertically scrollable layout better suited to smaller screens.
-
----
-
-### WhatsApp booking
-
-Booking actions use dynamically generated WhatsApp URLs.
-
-Example:
-
-```ts
-export function buildWhatsAppUrl(phoneNumber: string, message: string): string {
-  const normalizedPhone = phoneNumber.replace(/\D/g, '');
-
-  return `https://wa.me/${normalizedPhone}?text=${encodeURIComponent(message.trim())}`;
-}
+```bash
+npm run
 ```
+
+Instale as dependências com:
+
+```bash
+npm ci
+```
+
+Quando o `package.json` definir o script `dev`, inicia o servidor de desenvolvimento com:
+
+```bash
+npm run dev
+```
+
+Abrir o endereço apresentado no terminal.
+
+
+### Equipa
+
+Cada profissional inclui um identificador, nome, função, fotografia, texto alternativo, apresentação, biografia e lista de serviços.
+
+### Serviços
+
+`src/data/services.ts` atualiza os serviços apresentados pelos cartões. Alterações ao modelo devem ser refletidas no tipo `Service` e nos componentes que o utilizam.
+
+### Imagens
+
+As imagens são referenciadas a partir de `/images/`. Ao substituir um ficheiro, verifica o enquadramento em mobile e desktop e otimiza o tamanho sem comprometer a legibilidade.
+
+## Acessibilidade e desempenho
+
+A implementação inclui elementos semânticos, nomes acessíveis para botões de perfil e de fecho, textos alternativos nas fotografias e um título para o mapa incorporado.
+
+O carregamento diferido é utilizado no mapa e em imagens fora da área inicial. A imagem principal tem prioridade de carregamento elevada, e algumas imagens têm dimensões explícitas para ajudar a estabilizar o layout.
+
+## Evolução prevista
+
+As seguintes melhorias são propostas de evolução e não funcionalidades dadas como concluídas:
+
+- [ ] Testes automatizados dos perfis, do preçário e das funções de contacto.
+- [ ] Integração contínua com verificação de tipos, lint, testes e build.
+- [ ] Medição de desempenho e otimização das imagens com base nos resultados.
+- [ ] Metadados de partilha e dados estruturados para pesquisa local.
+
+Um CMS ou sistema de reservas poderá ser considerado se surgir a necessidade de gerir conteúdo sem alterações ao código ou de disponibilizar marcações diretamente no website.
+
