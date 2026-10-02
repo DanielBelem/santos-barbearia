@@ -9,7 +9,7 @@ export function ServicesSection() {
     <section
       id="servicos"
       aria-labelledby="services-title"
-      className="bg-ink text-white py-20 sm:py-28"
+      className="bg-ink py-20 text-white sm:py-28"
     >
       <Container>
         <SectionHeading
@@ -20,7 +20,7 @@ export function ServicesSection() {
           inverted
         />
 
-        <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4 md:divide-y-0 md:divide-x divide-white/20">
+        <div className="mt-14 grid gap-4 divide-white/20 md:grid-cols-2 md:divide-x md:divide-y-0 xl:grid-cols-4">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} position={index + 1} />
           ))}
@@ -45,9 +45,9 @@ export function ServicesSection() {
                   className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 py-4 text-white"
                 >
                   <div
-                   aria-hidden="true"
-                   className="mx-auto h-px w-full maxd-w-80 bg-white/60 sm:mx-0"
-                />
+                    aria-hidden="true"
+                    className="maxd-w-80 mx-auto h-px w-full bg-white/60 sm:mx-0"
+                  />
                   <dt className="font-medium">{service.name}</dt>
 
                   <dd className="text-sm text-neutral-600 tabular-nums">

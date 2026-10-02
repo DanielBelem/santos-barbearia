@@ -83,7 +83,9 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
               {member.name}
             </h2>
 
-            <p className="mt-1 text-lg text-neutral-500 italic">{member.services.join(' - ')}</p>
+            <p className="mt-1 text-lg text-neutral-500 italic">
+              {member.services.join(' - ')}
+            </p>
           </header>
 
           <div className="my-7 h-px bg-black/10" />

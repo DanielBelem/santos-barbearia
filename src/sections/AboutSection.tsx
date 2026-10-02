@@ -5,7 +5,11 @@ import { SectionHeading } from '../components/ui/SectionHeading';
 
 export function AboutSection() {
   return (
-    <section id="about-title" aria-labelledby="about-title" className="bg-paper py-20 sm:py-28">
+    <section
+      id="about-title"
+      aria-labelledby="about-title"
+      className="bg-paper py-20 sm:py-28"
+    >
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
