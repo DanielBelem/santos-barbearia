@@ -12,7 +12,7 @@ export function ServicesSection() {
     <section
       id="servicos"
       aria-labelledby="services-title"
-      className="bg-ink text-ink py-20 sm:py-28"
+      className="bg-ink text-white py-20 sm:py-28"
     >
       <Container>
         <SectionHeading
@@ -20,9 +20,10 @@ export function ServicesSection() {
           eyebrow="Os nossos serviços"
           title="Cuidado, estilo e precisão."
           centered
+          inverted
         />
 
-        <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4 md:divide-y-0 md:divide-x divide-white/20">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} position={index + 1} />
           ))}
