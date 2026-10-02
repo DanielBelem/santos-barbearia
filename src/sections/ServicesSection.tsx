@@ -2,9 +2,6 @@ import { Container } from '../components/layout/Container';
 import { ServiceCard } from '../components/cards/ServiceCard';
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { services } from '../data/services';
-import { CtaLink } from '../components/ui/CtaLink';
-import { siteConfig } from '../config/site';
-import { buildWhatsAppUrl } from '../utils/contact';
 import { formatServicePrice, servicePrices } from '../data/servicePrices';
 
 export function ServicesSection() {
@@ -40,7 +37,7 @@ export function ServicesSection() {
             </span>
           </summary>
 
-          <div className="border-t border-black/10 px-6 pb-6">
+          <div className="px-6 pb-6">
             <dl className="divide-y divide-black/10">
               {servicePrices.map((service) => (
                 <div

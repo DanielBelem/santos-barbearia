@@ -22,6 +22,7 @@ export function CtaLink({
   className = '',
   target,
   rel,
+  onClick,
   ...anchorProps
 }: CtaLinkProps) {
   const safeRel = target === '_blank' ? (rel ?? 'noopener noreferrer') : rel;
@@ -31,6 +32,24 @@ export function CtaLink({
       {...anchorProps}
       target={target}
       rel={safeRel}
+      onClick={(event) => {
+        onClick?.(event);
+
+        if (
+          !event.defaultPrevented &&
+          typeof anchorProps.href === 'string' &&
+          anchorProps.href.startsWith('#')
+        ) {
+          event.preventDefault();
+
+          const element = document.querySelector(anchorProps.href);
+
+          element?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }}
       className={`inline-flex min-h-12 items-center justify-center rounded-full border px-6 py-3 text-xs font-semibold tracking-[0.14em] uppercase transition-colors ${variantClasses[variant]} ${className}`}
     >
       {children}
