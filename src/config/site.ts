@@ -8,7 +8,7 @@ export type SiteConfig = {
   shortName: string;
   description: string;
   url: string;
-  email: string;
+  //email: string;
   phoneDisplay: string;
   phoneInternational: string;
   whatsappMessage: string;
@@ -29,7 +29,7 @@ export const siteConfig = {
   description:
     'Cortes clássicos, estilo moderno e cuidados de barba em São Mamede de Infesta.',
   url: 'https://santosbarbearia.pt',
-  email: 'geral@santosbarbearia.pt', // email necessita confirmação
+  //email: // email necessita confirmação
   phoneDisplay: '(+351) 913 135 742',
   phoneInternational: '351913135742',
   whatsappMessage: 'Olá! Gostaria de marcar um serviço.',

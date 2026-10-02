@@ -8,8 +8,6 @@ O projeto foi desenvolvido como um trabalho freelance real, desde a recolha de r
 
 [https://santosbarbearia.pt](https://santos-barbearia.netlify.app)
 
-
-
 ![Santos Barbearia website preview](./public/images/preview.png)
 
 ---
@@ -112,13 +110,9 @@ Booking actions use dynamically generated WhatsApp URLs.
 Example:
 
 ```ts
-export function buildWhatsAppUrl(
-  phoneNumber: string,
-  message: string,
-): string {
+export function buildWhatsAppUrl(phoneNumber: string, message: string): string {
   const normalizedPhone = phoneNumber.replace(/\D/g, '');
 
-  return `https://wa.me/${normalizedPhone}?text=${encodeURIComponent(
-    message.trim(),
-  )}`;
+  return `https://wa.me/${normalizedPhone}?text=${encodeURIComponent(message.trim())}`;
 }
+```

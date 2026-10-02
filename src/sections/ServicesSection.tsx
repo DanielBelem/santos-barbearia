@@ -5,38 +5,61 @@ import { services } from '../data/services';
 import { CtaLink } from '../components/ui/CtaLink';
 import { siteConfig } from '../config/site';
 import { buildWhatsAppUrl } from '../utils/contact';
+import { formatServicePrice, servicePrices } from '../data/servicePrices';
 
 export function ServicesSection() {
-  const whatsappUrl = buildWhatsAppUrl(
-    siteConfig.phoneInternational,
-    siteConfig.whatsappMessage,
-  );
-
   return (
     <section
       id="servicos"
       aria-labelledby="services-title"
-      className="bg-ink py-20 sm:py-28"
+      className="bg-ink text-ink py-20 sm:py-28"
     >
       <Container>
         <SectionHeading
           id="services-title"
           eyebrow="Os nossos serviços"
           title="Cuidado, estilo e precisão."
-          inverted
           centered
         />
 
-        <div className="mt-14 grid divide-y divide-white/15 md:grid-cols-2 md:divide-x md:divide-y-0 xl:grid-cols-4">
+        <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} position={index + 1} />
           ))}
         </div>
-        <div className="mt-5 flex justify-center">
-          <CtaLink href={whatsappUrl} target="_blank" variant="light">
-            Consultar Preços
-          </CtaLink>
-        </div>
+
+        <details className="group mx-auto mt-10 max-w-2xl rounded-lg border border-white">
+          <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 rounded-lg px-6 py-4 font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+            Consultar preços
+            <span
+              aria-hidden="true"
+              className="text-2xl transition-transform group-open:rotate-45 motion-reduce:transition-none"
+            >
+              +
+            </span>
+          </summary>
+
+          <div className="border-t border-black/10 px-6 pb-6">
+            <dl className="divide-y divide-black/10">
+              {servicePrices.map((service) => (
+                <div
+                  key={service.id}
+                  className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 py-4 text-white"
+                >
+                  <div
+                   aria-hidden="true"
+                   className="mx-auto h-px w-full maxd-w-80 bg-white/60 sm:mx-0"
+                />
+                  <dt className="font-medium">{service.name}</dt>
+
+                  <dd className="text-sm text-neutral-600 tabular-nums">
+                    {formatServicePrice(service)}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </details>
       </Container>
     </section>
   );

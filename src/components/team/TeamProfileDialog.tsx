@@ -47,11 +47,11 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
       onClose={handleClose}
       onClick={handleBackdropClick}
       aria-labelledby="professional-name"
-      className="m-auto h-[92dvh] w-[calc(100vw-24px)] max-w-none overflow-hidden bg-white p-0 backdrop:bg-black/60 backdrop:backdrop-blur-md sm:h-[min(90vh,850px)] sm:w-[min(94vw,1100px)]"
+      className="m-auto h-[92dvh] w-[calc(100vw-24px)] max-w-none overflow-hidden bg-white p-0 backdrop:bg-black/60 backdrop:backdrop-blur-md sm:h-[min(90dvh,850px)] sm:w-[min(94vw,1100px)]"
     >
-      <div className="h-full overflow-y-auto bg-white lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:overflow-hidden">
+      <div className="h-full min-h-0 overflow-y-auto overscroll-contain bg-white lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:grid-rows-[minmax(0,1fr)] lg:overflow-hidden">
         {/* FOTO */}
-        <div className="relative bg-black p-5 lg:h-full">
+        <div className="relative min-h-0 bg-black p-5 lg:h-full lg:overflow-hidden">
           <ImageWithFallback
             src={member.imageSrc}
             alt={member.imageAlt}
@@ -70,7 +70,7 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
         </div>
 
         {/* CONTEÚDO */}
-        <div className="bg-white px-6 py-10 sm:px-10 lg:h-full lg:overflow-y-auto lg:px-14 lg:py-12">
+        <div className="lg:overflow-contain min-h-0 min-w-0 bg-white px-6 pt-10 pb-16 sm:px-10 lg:h-full lg:overflow-y-auto lg:px-14 lg:py-12 lg:pb-20">
           <header>
             <p className="text-xs font-semibold tracking-[0.28em] text-neutral-500 uppercase">
               {member.eyebrow}
@@ -83,7 +83,7 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
               {member.name}
             </h2>
 
-            <p className="mt-1 text-lg text-neutral-500 italic">{member.role}</p>
+            <p className="mt-1 text-lg text-neutral-500 italic">{member.services.join(' - ')}</p>
           </header>
 
           <div className="my-7 h-px bg-black/10" />

@@ -13,7 +13,7 @@ export const teamMembers = [
   {
     id: 'magal-abreu',
     name: 'Magal Abreu',
-    role: 'Barbeiro - Fundador - Low Fade & Degradês - Barba Italiana - Visagismo Masculino',
+    role: 'Barbeiro - Fundador',
     imageSrc: '/images/magal_santos.png',
     imageAlt: 'Sydney Abreu ( Magal )',
     eyebrow: 'Barbeiro - Fundador',
@@ -28,7 +28,7 @@ export const teamMembers = [
   {
     id: 'erica-carvalho',
     name: 'Erica Carvalho',
-    role: 'Pigmentação Capilar - Alisamentos & Progressivas - Tratamentos & Reconstrução',
+    role: 'Cabeleireira',
     imageSrc: '/images/erica_santos.png',
     imageAlt: 'Erica Carvalho',
     eyebrow: 'Hairdresser',

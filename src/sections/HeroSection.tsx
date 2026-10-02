@@ -44,7 +44,7 @@ export function HeroSection() {
 
           <div
             aria-hidden="true"
-            className="mx-auto my-8 h-px w-80 bg-white/60 sm:mx-0"
+            className="mx-auto my-8 h-px w-full maxd-w-80 bg-white/60 sm:mx-0"
           />
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-stretch">
