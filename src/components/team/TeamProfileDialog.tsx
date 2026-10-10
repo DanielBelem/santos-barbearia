@@ -72,10 +72,10 @@ export function TeamProfileDialog({ member, onClose }: TeamProfileDialogProps) {
         {/* CONTEÚDO */}
         <div className="lg:overflow-contain min-h-0 min-w-0 bg-white px-6 pt-10 pb-16 sm:px-10 lg:h-full lg:overflow-y-auto lg:px-14 lg:py-12 lg:pb-20">
           <header>
-            <p className="text-xs font-semibold tracking-[0.28em] text-neutral-500 uppercase">
+            {/*<p className="text-xs font-semibold tracking-[0.28em] text-neutral-500 uppercase">
               {member.eyebrow}
             </p>
-
+            */}
             <h2
               id="professional-name"
               className="font-display mt-3 text-4xl font-semibold tracking-tight uppercase sm:text-5xl"

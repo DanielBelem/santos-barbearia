@@ -19,13 +19,13 @@ export function ServicesSection() {
           inverted
         />
 
-        <div className="mt-14 grid gap-4 divide-white/20 md:grid-cols-2 md:divide-x md:divide-y-0 xl:grid-cols-4">
+        <div className="mt-14 grid gap-4 divide-amber-400 md:grid-cols-2 md:divide-x md:divide-y-0 xl:grid-cols-4">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} position={index + 1} />
           ))}
         </div>
 
-        <details className="group mx-auto mt-10 max-w-2xl rounded-lg border border-white">
+        <details className="group mx-auto mt-10 max-w-2xl rounded-lg border border-amber-400">
           <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 rounded-lg px-6 py-4 font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
             Consultar preços
             <span
@@ -45,7 +45,7 @@ export function ServicesSection() {
                 >
                   <div
                     aria-hidden="true"
-                    className="maxd-w-80 mx-auto h-px w-full bg-white/60 sm:mx-0"
+                    className="maxd-w-80 mx-auto h-px w-full bg-amber-400 sm:mx-0"
                   />
                   <dt className="font-medium">{service.title}</dt>
 

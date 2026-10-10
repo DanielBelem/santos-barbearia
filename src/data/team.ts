@@ -16,7 +16,7 @@ export const teamMembers = [
     role: 'Barbeiro - Fundador',
     imageSrc: '/images/magal_santos.png',
     imageAlt: 'Sydney Abreu ( Magal )',
-    eyebrow: 'Barbeiro - Fundador',
+    eyebrow: 'Fundador',
     bio: [
       'Com mais de 10 anos de experiência na área da barbearia, Sidney Abreu ( Magal ),é um barbeiro especializado em cortes modernos e personalizados, sempre focado em realçar o estilo e a personalidade de cada cliente.',
       'Ao longo da sua trajetória, desenvolveu técnicas de precisão em Low Fade, degradês, acabamento detalhado e Barba Italiana, tornando-se referência pelo cuidado com os detalhes e pela qualidade dos resultados.',
@@ -28,10 +28,10 @@ export const teamMembers = [
   {
     id: 'erica-carvalho',
     name: 'Erica Carvalho',
-    role: 'Cabeleireira',
+    role: 'Barbeira',
     imageSrc: '/images/erica_santos.png',
     imageAlt: 'Erica Carvalho',
-    eyebrow: 'Hairdresser',
+    eyebrow: 'Barbeira',
     bio: [
       'Com mais de 10 anos de experiência na área da beleza, Erica Carvalho é especialista em transformar e valorizar a imagem das suas clientes através de técnicas modernas e de um atendimento personalizado.',
       'Especializada em pigmentação capilar, alisamentos e progressivas, tratamentos químicos, hidratações profundas, reconstruções e recuperação da fibra capilar, trabalha com foco na saúde e beleza dos cabelos, proporcionando resultados duradouros e naturais.',

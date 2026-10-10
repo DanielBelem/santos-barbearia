@@ -18,7 +18,7 @@ export const services = [
       'Cortes modernos e clássicos, adaptados ao formato do rosto e ao estilo de cada cliente.',
     imageSrc: '/images/cut.png',
     imageAlt: 'Haircut',
-    priceInCents :  1300,
+    priceInCents :  1400,
   },
   {
     id: 'beard',
@@ -26,7 +26,7 @@ export const services = [
     description: 'Aparagem, desenho e modelação da barba, com acabamento cuidado.',
     imageSrc: '/images/beard.png',
     imageAlt: 'Beard Trim',
-    priceInCents :  1400,
+    priceInCents :  null,
   },
   {
     id: 'complete',
@@ -34,7 +34,7 @@ export const services = [
     description: 'Corte, barba, toalha quente e finalização para um resultado completo.',
     imageSrc: '/images/complete.png',
     imageAlt: 'Full Service',
-    priceInCents :  1500,
+    priceInCents :  null,
   },
   {
     id: 'care',
@@ -42,7 +42,7 @@ export const services = [
     description: 'Seleção de produtos profissionais para cabelo, barba e pele.',
     imageSrc: '/images/care.png',
     imageAlt: 'Produtos de cuidados',
-    priceInCents :  1600,
+    priceInCents :  null,
   },
 ] satisfies readonly Service[];
 
