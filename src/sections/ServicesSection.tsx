@@ -1,8 +1,7 @@
 import { Container } from '../components/layout/Container';
 import { ServiceCard } from '../components/cards/ServiceCard';
 import { SectionHeading } from '../components/ui/SectionHeading';
-import { services } from '../data/services';
-import { formatServicePrice, servicePrices } from '../data/servicePrices';
+import { services, formatServicePrice } from '../data/services';
 
 export function ServicesSection() {
   return (
@@ -39,7 +38,7 @@ export function ServicesSection() {
 
           <div className="px-6 pb-6">
             <dl className="divide-y divide-black/10">
-              {servicePrices.map((service) => (
+              {services.map((service) => (
                 <div
                   key={service.id}
                   className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 py-4 text-white"
@@ -48,7 +47,7 @@ export function ServicesSection() {
                     aria-hidden="true"
                     className="maxd-w-80 mx-auto h-px w-full bg-white/60 sm:mx-0"
                   />
-                  <dt className="font-medium">{service.name}</dt>
+                  <dt className="font-medium">{service.title}</dt>
 
                   <dd className="text-sm text-neutral-600 tabular-nums">
                     {formatServicePrice(service)}
