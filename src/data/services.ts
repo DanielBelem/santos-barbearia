@@ -12,6 +12,16 @@ export type Service = {
 
 export const services = [
   {
+    id: 'care',
+    title: 'Coloração',
+    description:
+      'Renova o teu visual com tintura capilar desde 10 €, madeixas por 25 € ou platinado por 40 €.',
+    imageSrc: '/images/care.png',
+    imageAlt: 'Coloração e cuidados do cabelo',
+    priceInCents: 1000,
+    from: true,
+  },
+  {
     id: 'haircut',
     title: 'Corte de cabelo',
     description:
@@ -38,16 +48,6 @@ export const services = [
     imageSrc: '/images/complete.png',
     imageAlt: 'Serviço de barbearia premium',
     priceInCents: 3000,
-  },
-  {
-    id: 'care',
-    title: 'Coloração',
-    description:
-      'Renova o teu visual com tintura capilar desde 10 €, madeixas por 25 € ou platinado por 40 €.',
-    imageSrc: '/images/care.png',
-    imageAlt: 'Coloração e cuidados do cabelo',
-    priceInCents: 1000,
-    from: true,
   },
 ] satisfies readonly Service[];
 
