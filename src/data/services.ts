@@ -15,7 +15,7 @@ export const services = [
     id: 'care',
     title: 'Coloração',
     description:
-      'Renova o teu visual com tintura capilar desde 10 €, madeixas por 25 € ou platinado por 40 €.',
+      'Renova o teu visual com tintura capilar desde 10 €, madeixas por 25 ou platinado por 40 €.',
     imageSrc: '/images/care.png',
     imageAlt: 'Coloração e cuidados do cabelo',
     priceInCents: 1000,
@@ -25,7 +25,7 @@ export const services = [
     id: 'haircut',
     title: 'Corte de cabelo',
     description:
-      'Cortes modernos e clássicos à tua medida. Corte infantil também disponível por 14 €.',
+      'Cortes modernos e clássicos à tua medida. Corte infantil também disponível',
     imageSrc: '/images/cut.png',
     imageAlt: 'Corte de cabelo',
     priceInCents: 1400,
